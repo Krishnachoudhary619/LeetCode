@@ -1,0 +1,18 @@
+Question -> All unique elements of the array should be collected in together without breaking the sequence. 
+//nums is the array of nums -> ascending array  
+
+
+    public int removeDuplicates(int[] nums) {
+        int unique=0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=nums[unique]){
+                unique+=1;
+                nums[unique]=nums[i];    
+            }
+            
+        }
+        return unique+1;  
+    }
+    
+    // input-> nums[1,1,2,2,3,5,7,7,7]
+    // output-> nums[1,2,3,5,7,5,7,7,7] ---> in this 1,2,3,5,7 are the unique elements so they are at the start and the rest can be anything.
